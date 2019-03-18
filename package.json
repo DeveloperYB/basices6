@@ -7,8 +7,8 @@
     "author": "YouBeen Kim <qlqjsk@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "jquery": "^3.3.1",
-        "paper": "^0.12.0"
+        "d3": "^5.9.2",
+        "jquery": "^3.3.1"
     },
     "devDependencies": {
         "@babel/core": "^7.3.3",
