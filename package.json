@@ -6,18 +6,14 @@
     "repository": "https://github.com/DeveloperYB/basices6.git",
     "author": "YouBeen Kim <qlqjsk@gmail.com>",
     "license": "MIT",
-    "dependencies": {
-        "d3": "^5.9.2",
-        "jquery": "^3.3.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@babel/core": "^7.3.3",
         "@babel/polyfill": "^7.2.5",
         "@babel/preset-env": "^7.3.1",
-        "parcel-bundler": "^1.11.0",
+        "gulp": "^4.0.0",
+        "gulp-babel": "^8.0.0",
         "sass": "^1.17.1"
     },
-    "scripts": {
-        "start": "parcel ./index.html"
-    }
+    "scripts": {}
 }
