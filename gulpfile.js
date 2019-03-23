@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 
-gulp.task('default', cb => {
+gulp.task('default', done => {
     //노드 소스
     gulp.src('es6/**/*.js')
         .pipe(babel())
@@ -17,5 +17,5 @@ gulp.task('default', cb => {
             console.log('done public es6');
         });
 
-    cb();
+    done();
 });
