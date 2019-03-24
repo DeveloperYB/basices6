@@ -33,8 +33,37 @@ while (dollar > 1 && dollar < 100) {
     } else {
         //판돈을 나눕니다.
         let remaining = totalBet;
-        // do {
-
-        // }while()
+        while (remaining > 0) {
+            const BET = RAND_FN(1, remaining);
+            const FACE = RANDFACE_FN();
+            bets[FACE] = bets[FACE] + BET;
+            remaining = remaining - BET;
+        }
     }
+    dollar = dollar - totalBet;
+    console.log(
+        `\tbets : ` +
+            Object.keys(bets)
+                .map(face => `${face} : ${bets[face]} betting dollar`)
+                .join(', ') +
+            ` (total : ${totalBet})`
+    );
+    // 주사위를 굴린다.
+    const HAND = [];
+    for (let roll = 0; roll < 3; roll++) {
+        HAND.push(RANDFACE_FN());
+    }
+    console.log(`\thand : ${HAND.join(', ')}`);
+
+    //딴 돈을 가져온다.
+    let winnings = 0;
+    for (let die = 0; die < HAND.length; die++) {
+        let face = HAND[die];
+        if (bets[face] > 0) winnings = winnings + bets[face];
+    }
+
+    dollar = dollar + winnings;
+    console.log(`\twinnings : $ ${winnings}`);
 }
+
+console.log(`\tEnding Dollar : $ ${dollar}`);
